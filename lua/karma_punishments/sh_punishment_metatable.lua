@@ -116,7 +116,7 @@ function PUNISHMENT:IsPunished(ply)
     return ply.KPPunishment and ply.KPPunishment.active and ply.KPPunishment.id == self.id
 end
 
-function PUNISMENT:IsPunishedPlayer(ply)
+function PUNISHMENT:IsPunishedPlayer(ply)
     return self:IsAlivePlayer(ply) and self:IsPunished(ply)
 end
 

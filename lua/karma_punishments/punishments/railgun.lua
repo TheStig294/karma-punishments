@@ -2,7 +2,7 @@ local PUNISHMENT = {}
 PUNISHMENT.id = "railgun"
 PUNISHMENT.name = "Forced Railgun"
 PUNISHMENT.desc = "Uh-oh... Forced railgun!"
-PUNISHMENT.extDesc = "Forces the you to use a railgun"
+PUNISHMENT.extDesc = "Forces the you to use a railgun (Different punishment for jesters!)"
 
 PUNISHMENT.convars = {
     {

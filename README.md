@@ -60,7 +60,7 @@ Forces you to drop your weapon every 5 seconds\
 
 ### Forced Railgun
 
-Forces the you to use a railgun\
+Forces the you to use a railgun (Different punishment for jesters!)\
 \
 *ttt_kp_railgun* - Default: 1 - Whether this punishment is enabled
 \
@@ -76,7 +76,7 @@ Forces you to use only a H.U.G.E.\
 
 ### Less Health
 
-Sets your health lower\
+Sets your health lower (Different punishment for jesters!)\
 \
 *ttt_kp_health* - Default: 1 - Whether this punishment is enabled
 \

@@ -2,7 +2,7 @@ local PUNISHMENT = {}
 PUNISHMENT.id = "health"
 PUNISHMENT.name = "Less Health"
 PUNISHMENT.desc = "You're not looking too healthy!"
-PUNISHMENT.extDesc = "Sets your health lower"
+PUNISHMENT.extDesc = "Sets your health lower (Different punishment for jesters!)"
 
 PUNISHMENT.convars = {
     {

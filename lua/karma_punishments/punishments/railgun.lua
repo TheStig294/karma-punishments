@@ -35,7 +35,7 @@ end
 
 -- Check the railgun is installed and the player is not a jester
 function PUNISHMENT:Condition(ply)
-    return weapons.Get("weapon_rp_railgun") ~= nil and not (ply.IsJesterTeam and ply:IsJesterTeam())
+    return weapons.Get("weapon_rp_railgun") ~= nil and not self:IsJester(ply)
 end
 
 TTTKP:Register(PUNISHMENT)

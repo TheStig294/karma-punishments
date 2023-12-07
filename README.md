@@ -90,6 +90,13 @@ Rotates your view randomly every few seconds\
 \
 *kp_rotation_seconds* - Default: 5 - Seconds between being randomly rotated
 
+### Reverse Controls
+
+Reverses many controls like moving backwards,\
+shooting <-> reloading or crouching <-> jumping
+\
+*ttt_kp_reverse* - Default: 1 - Whether this punishment is enabled
+
 ### Random Sensitivity
 
 Randomly changes your mouse sensitivity every few seconds\
@@ -97,3 +104,9 @@ Randomly changes your mouse sensitivity every few seconds\
 *ttt_kp_sensitivity* - Default: 1 - Whether this punishment is enabled
 \
 *kp_sensitivity_seconds* - Default: 5 - Seconds between sensitivity changes
+
+### Screen Blur
+
+Applies a heavy screen blur\
+\
+*ttt_kp_screenblur* - Default: 1 - Whether this punishment is enabled

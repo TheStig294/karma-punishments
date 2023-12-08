@@ -2,9 +2,9 @@
 -- Server-side karma punishment functions 
 -- 
 -- Debug command for testing punishments, only works on a peer-to-peer server for the server host if sv_cheats is on
-concommand.Add("kp_apply", function(ply, _, _, argsStr)
+concommand.Add("kp_apply", function(ply, _, args, argsStr)
     if argsStr ~= "" then
-        local PUNISHMENT = TTTKP.punishments[argStr]
+        local PUNISHMENT = TTTKP.punishments[args[1]]
         TTTKP:ApplyPunishment(ply, PUNISHMENT)
     else
         TTTKP:SelectPunishment(ply)

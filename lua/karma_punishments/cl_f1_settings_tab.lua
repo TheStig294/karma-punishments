@@ -149,7 +149,7 @@ end
 local function DrawPunishmentBar(list, PUNISHMENT)
     -- Background box
     local background = list:Add("DPanel")
-    background:SetSize(480, 64)
+    background:SetSize(560, 64)
     background:DockPadding(10, 0, 10, 5)
     -- Enabled cvar
     local alpha = 255
@@ -184,7 +184,7 @@ local function DrawPunishmentBar(list, PUNISHMENT)
     enabledBox:SetChecked(enabledCvar:GetBool())
     enabledBox:SetIndent(10)
     enabledBox:SizeToContents()
-    enabledBox:SetPos(400, 5)
+    enabledBox:SetPos(464, 5)
 
     function enabledBox:OnChange()
         net.Start("TTTKPChangeConvar")
@@ -206,7 +206,7 @@ local function DrawPunishmentBar(list, PUNISHMENT)
         local optionsButton = vgui.Create("DButton", background)
         optionsButton:SetText("Options")
         optionsButton:SizeToContents()
-        optionsButton:SetPos(350, 4)
+        optionsButton:SetPos(410, 4)
 
         function optionsButton:DoClick()
             OptionsMenu(PUNISHMENT)
@@ -258,14 +258,14 @@ local function CreateOptionsMenu()
 
     -- Title text
     local titleText = nonScrollList:Add("DLabel")
-    titleText:SetText("                             Karma Punishment Admin Options")
+    titleText:SetText("                         Karma Punishment Admin Options")
     titleText:SetFont("Trebuchet24")
     titleText:SizeToContents()
     -- Int slider for changing the threshold of karma when players get punished
     local thresholdCvar = GetConVar("ttt_kp_low_karma_threshold")
     -- Slider integer convars
     local slider = nonScrollList:Add("DNumSlider")
-    slider:SetSize(300, 100)
+    slider:SetSize(600, 100)
     slider:SetText(thresholdCvar:GetHelpText())
     slider:SetMin(thresholdCvar:GetMin())
     slider:SetMax(thresholdCvar:GetMax())

@@ -8,7 +8,7 @@ TTTKP.activePunishments = {}
 TTTKP.punishment_meta = {} -- Set by sh_punishment_metatable.lua
 
 -- Low karma threshold cvar, defines the amount of karma below which players start receiving punishments
-CreateConVar("ttt_kp_low_karma_threshold", "800", {FCVAR_ARCHIVE, FCVAR_NOTIFY, FCVAR_REPLICATED}, "The amount of karma below which players start receiving punishments", 0, 1000)
+CreateConVar("ttt_kp_low_karma_threshold", "800", {FCVAR_ARCHIVE, FCVAR_NOTIFY, FCVAR_REPLICATED}, "Karma punishment threshold (Double-click number)", 0, 1000)
 
 local KPConvars = {
     ttt_kp_low_karma_threshold = true

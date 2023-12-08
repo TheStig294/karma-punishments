@@ -17,8 +17,8 @@ net.Receive("TTTKPApply", function()
 
     -- In Custom Roles for TTT, karma is displayed as a percentage, so we need to convert the karma
     -- threshold for punishments into a percentage
-    if ConVarExists("ttt_show_raw_karma_value") and GetConVar("ttt_show_raw_karma_value"):GetBool() then
-        karmaValue = thresholdCvar:GetInt() / GetConVar("ttt_karma_max"):GetInt() .. "%"
+    if ConVarExists("ttt_show_raw_karma_value") and not GetConVar("ttt_show_raw_karma_value"):GetBool() then
+        karmaValue = math.Round(thresholdCvar:GetInt() / GetConVar("ttt_karma_max"):GetInt() * 100) .. "%"
     else
         karmaValue = thresholdCvar:GetInt()
     end

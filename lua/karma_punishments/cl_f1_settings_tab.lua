@@ -309,7 +309,7 @@ local function CreateOptionsMenu()
     -- Refreshes the punishments list according to what is typed in the search bar
     searchBar.OnValueChange = function(_, value)
         list:Clear()
-        scroll:Rebuild()
+        scroll:InvalidateLayout()
         DrawPunishmentsList(list, value)
     end
 

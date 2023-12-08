@@ -3,7 +3,7 @@
 local PUNISHMENT = {}
 PUNISHMENT.id = "reverse"
 PUNISHMENT.name = "Reverse Controls"
-PUNISHMENT.desc = "Your controls have been reversed!"
+PUNISHMENT.desc = "Your controls have been reversed! (Press 'R' to shoot!)"
 PUNISHMENT.extDesc = "Reverses many controls like moving backwards,\nshooting <-> reloading or crouching <-> jumping"
 
 function PUNISHMENT:Apply(ply)

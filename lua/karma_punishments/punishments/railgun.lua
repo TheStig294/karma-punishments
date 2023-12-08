@@ -14,6 +14,9 @@ PUNISHMENT.convars = {
 local secsCvar = CreateConVar("kp_railgun_seconds", 3, {FCVAR_ARCHIVE, FCVAR_NOTIFY, FCVAR_REPLICATED}, "Seconds between being given a railgun", 1, 30)
 
 function PUNISHMENT:Apply(ply)
+    if CLIENT then return end
+    ply:StripWeapons()
+    ply:Give("weapon_rp_railgun").AllowDrop = false
     local timername = "TTTKPRailgun" .. ply:SteamID64()
 
     timer.Create(timername, secsCvar:GetInt(), 0, function()
@@ -24,8 +27,7 @@ function PUNISHMENT:Apply(ply)
         end
 
         ply:StripWeapons()
-        local SWEP = ply:Give("weapon_rp_railgun")
-        SWEP.AllowDrop = false
+        ply:Give("weapon_rp_railgun").AllowDrop = false
     end)
 
     self:AddHook("PlayerCanPickupWeapon", function(p, weapon)

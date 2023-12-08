@@ -14,6 +14,9 @@ PUNISHMENT.convars = {
 local secsCvar = CreateConVar("kp_huge_seconds", 10, {FCVAR_ARCHIVE, FCVAR_NOTIFY, FCVAR_REPLICATED}, "Seconds between being given a H.U.G.E.", 1, 30)
 
 function PUNISHMENT:Apply(ply)
+    if CLIENT then return end
+    ply:StripWeapons()
+    ply:Give("weapon_zm_sledge").AllowDrop = false
     local timername = "TTTKPHuge" .. ply:SteamID64()
 
     timer.Create(timername, secsCvar:GetInt(), 0, function()
@@ -24,7 +27,7 @@ function PUNISHMENT:Apply(ply)
         end
 
         ply:StripWeapons()
-        ply:Give("weapon_zm_sledge")
+        ply:Give("weapon_zm_sledge").AllowDrop = false
     end)
 
     self:AddHook("PlayerCanPickupWeapon", function(p, weapon)

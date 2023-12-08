@@ -1,7 +1,7 @@
 local PUNISHMENT = {}
 PUNISHMENT.id = "fog"
 PUNISHMENT.name = "Foggy Vision"
-PUNISHMENT.desc = "You can't see too far away"
+PUNISHMENT.desc = "A fog has rolled in..."
 PUNISHMENT.extDesc = "Puts a fog effect on your screen,\nwhich limits how far you can see"
 
 PUNISHMENT.convars = {

@@ -21,14 +21,7 @@ function PUNISHMENT:Apply(ply)
     }
 
     self:AddHook("RenderScreenspaceEffects", function()
-        if not self:IsPunishedPlayer(ply) then
-            -- Since we're on the client only we can safely remove the hook without affecting other
-            -- players with the same punishment
-            self:RemoveHook("RenderScreenspaceEffects")
-
-            return
-        end
-
+        if not self:IsPunishedPlayer(ply) then return end
         DrawMotionBlur(0.4, 0.8, 0.05)
         DrawToyTown(2, ScrH() / 2)
         DrawSharpen(1.2, 1.2)

@@ -30,5 +30,6 @@ net.Receive("TTTKPApply", function()
     end
 
     -- Punishment flag
+    PUNISHMENT.active = true
     ply.KPPunishment = PUNISHMENT
 end)

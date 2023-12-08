@@ -116,8 +116,8 @@ Your sprinting is disabled\
 
 Rotates your view randomly every few seconds\
 \
-*ttt_kp_rotation* - Default: 1 - Whether this punishment is enabled\
-*kp_rotation_seconds* - Default: 5 - Seconds between being randomly rotated
+*ttt_kp_rotate* - Default: 1 - Whether this punishment is enabled\
+*kp_rotate_seconds* - Default: 5 - Seconds between being randomly rotated
 
 ### Reverse Controls
 
@@ -130,8 +130,8 @@ shooting <-> reloading or crouching <-> jumping
 
 Randomly changes your mouse sensitivity every few seconds\
 \
-*ttt_kp_sensitivity* - Default: 1 - Whether this punishment is enabled\
-*kp_sensitivity_seconds* - Default: 5 - Seconds between sensitivity changes
+*ttt_kp_sensitive* - Default: 1 - Whether this punishment is enabled\
+*kp_sensitive_seconds* - Default: 5 - Seconds between sensitivity changes
 
 ### Screen Blur
 

@@ -57,7 +57,7 @@ function PUNISHMENT:Apply(ply)
                     originalFOV = ply:GetFOV()
                 end
 
-                ply:SetFOV(originalFOV[ply:SteamID64()] * fovScale, 0)
+                ply:SetFOV(originalFOV * fovScale, 0)
             else
                 ply:SetFOV(0, 0)
                 timer.Remove(timername)

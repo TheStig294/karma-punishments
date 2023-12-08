@@ -12,7 +12,7 @@ concommand.Add("kp_apply", function(ply, _, args, argsStr)
 end, nil, "Applies a karma punishment to yourself, if no argument is given, selects a random one", FCVAR_CHEAT)
 
 -- Finds a punishment for the player that can be applied, and applies it with TTTKP:ApplyPunishment()
-function TTTKP:SelectPunishment(ply, skipCanPunishCheck)
+function TTTKP:SelectPunishment(ply)
     if not IsValid(ply) or not ply:IsPlayer() then return end
     -- Choose a random punishment from available ones to give to the player
     local PUNISHMENT
@@ -56,7 +56,7 @@ end
 
 -- Getting the low karma amount convar and ttt_karma convar
 local thresholdCvar = GetConVar("ttt_kp_low_karma_threshold")
-local karmaCvar
+local karmaCvar = GetConVar("ttt_karma")
 
 hook.Add("PostGamemodeLoaded", "TTTKPGetKarmaConvar", function()
     karmaCvar = GetConVar("ttt_karma")

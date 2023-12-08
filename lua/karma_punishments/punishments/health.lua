@@ -14,8 +14,9 @@ PUNISHMENT.convars = {
 local healthCvar = CreateConVar("kp_health_amount", 1, {FCVAR_ARCHIVE, FCVAR_NOTIFY, FCVAR_REPLICATED}, "Amount of health you are set to", 1, 99)
 
 function PUNISHMENT:Apply(ply)
-    if CLIENT then return end
+  
     ply:SetHealth(healthCvar:GetInt())
+    if CLIENT then return end
     ply:SetMaxHealth(healthCvar:GetInt())
 end
 

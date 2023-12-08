@@ -23,7 +23,7 @@ net.Receive("TTTKPApply", function()
         karmaValue = thresholdCvar:GetInt()
     end
 
-    chat.AddText(COLOR_YELLOW, "===Karma below " .. karmaValue .. "!===")
+    chat.AddText(COLOR_YELLOW, "===Karma below " .. karmaValue .. ". Karma punishment!===")
 
     if PUNISHMENT.desc then
         chat.AddText(COLOR_YELLOW, PUNISHMENT.desc)

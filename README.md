@@ -29,9 +29,18 @@ Some punishments require another mod to be installed to work! Here is the comple
 
 Requires: [Lykrast's TTT Weapon Collection](https://steamcommunity.com/sharedfiles/filedetails/?id=337994500)
 
+### No Sprinting
+
+Requires: [TTT Sprint](https://steamcommunity.com/sharedfiles/filedetails/?id=933056549)\
+(Or some other mod that adds sprinting)
+
+### Third-person
+
+Requires: [Enhanced ThirdPerson [Reupload]](https://steamcommunity.com/sharedfiles/filedetails/?id=2593095865)
+
 ## Credits
 
-"Reverse Controls" punishment uses code from Malivil's "Opposite day" randomat: <https://steamcommunity.com/sharedfiles/filedetails/?id=2055805086>
+"Reverse Controls", "Less Ammo" and "Zoomed-in FOV" punishments use code from Malivil's "Opposite day", "Wasteful!" and "Quake Pro" randomat events: <https://steamcommunity.com/sharedfiles/filedetails/?id=2055805086>
 
 ## Steam Workshop Link
 
@@ -46,48 +55,68 @@ Requires: [Lykrast's TTT Weapon Collection](https://steamcommunity.com/sharedfil
 Forces you to move backwards only, very quickly\
 Can stop in place by holding the forwards key\
 \
-*ttt_kp_backwards* - Default: 1 - Whether this punishment is enabled
-\
+*ttt_kp_backwards* - Default: 1 - Whether this punishment is enabled\
 *kp_backwards_speed* - Default: 440 - Backwards movement speed
 
 ### Butterfingers
 
 Forces you to drop your weapon every 5 seconds\
 \
-*ttt_kp_butter* - Default: 1 - Whether this punishment is enabled
-\
+*ttt_kp_butter* - Default: 1 - Whether this punishment is enabled\
 *kp_butter_seconds* - Default: 5 - Seconds between dropping weapons
+
+### Crab Walk
+
+Forward and backward movement is disabled, you can only walk sideways\
+\
+*ttt_kp_crabwalk* - Default: 1 - Whether this punishment is enabled
+
+### Foggy Vision
+
+Puts a fog effect on your screen, which limits how far you can see\
+\
+*ttt_kp_fog* - Default: 1 - Whether this punishment is enabled\
+*kp_fog_mult* - Default: 1 - Fog distance multiplier
 
 ### Forced Railgun
 
 Forces the you to use a railgun (Different punishment for jesters!)\
 \
-*ttt_kp_railgun* - Default: 1 - Whether this punishment is enabled
-\
+*ttt_kp_railgun* - Default: 1 - Whether this punishment is enabled\
 *kp_railgun_seconds* - Default: 3 - Seconds between being given a railgun
 
 ### H.U.G.E. Problem
 
 Forces you to use only a H.U.G.E.\
 \
-*ttt_kp_huge* - Default: 1 - Whether this punishment is enabled
-\
+*ttt_kp_huge* - Default: 1 - Whether this punishment is enabled\
 *kp_huge_seconds* - Default: 10 - Seconds between being given a H.U.G.E.
+
+### Less Ammo
+
+Guns use more ammo per shot\
+\
+*ttt_kp_ammo* - Default: 1 - Whether this punishment is enabled\
+*kp_ammo_wasted_bullets* - Default: 2 - No. of extra bullets wasted
 
 ### Less Health
 
 Sets your health lower (Different punishment for jesters!)\
 \
-*ttt_kp_health* - Default: 1 - Whether this punishment is enabled
-\
+*ttt_kp_health* - Default: 1 - Whether this punishment is enabled\
 *kp_health_amount* - Default: 1 - Amount of health you are set to
+
+### No Sprinting
+
+Your sprinting is disabled\
+\
+*ttt_kp_sprinting* - Default: 1 - Whether this punishment is enabled
 
 ### Random Rotation
 
 Rotates your view randomly every few seconds\
 \
-*ttt_kp_rotation* - Default: 1 - Whether this punishment is enabled
-\
+*ttt_kp_rotation* - Default: 1 - Whether this punishment is enabled\
 *kp_rotation_seconds* - Default: 5 - Seconds between being randomly rotated
 
 ### Reverse Controls
@@ -101,8 +130,7 @@ shooting <-> reloading or crouching <-> jumping
 
 Randomly changes your mouse sensitivity every few seconds\
 \
-*ttt_kp_sensitivity* - Default: 1 - Whether this punishment is enabled
-\
+*ttt_kp_sensitivity* - Default: 1 - Whether this punishment is enabled\
 *kp_sensitivity_seconds* - Default: 5 - Seconds between sensitivity changes
 
 ### Screen Blur
@@ -110,3 +138,24 @@ Randomly changes your mouse sensitivity every few seconds\
 Applies a heavy screen blur\
 \
 *ttt_kp_screenblur* - Default: 1 - Whether this punishment is enabled
+
+### Slow Movement
+
+You move more slowly\
+\
+*ttt_kp_slow* - Default: 1 - Whether this punishment is enabled\
+*kp_slow_mult* - Default: 0.5 - Speed multiplier
+
+### Third-person
+
+You are forced to use a third-person view\
+\
+*ttt_kp_thirdperson* - Default: 1 - Whether this punishment is enabled
+
+### Zoomed-in FOV
+
+Sets your FOV lower\
+\
+*ttt_kp_fov* - Default: 1 - Whether this punishment is enabled\
+*kp_fov_scale* - Default: 0.5 - FOV multiplier\
+*kp_fov_scale_ironsight* - Default: 0.3 - Ironsights FOV multiplier

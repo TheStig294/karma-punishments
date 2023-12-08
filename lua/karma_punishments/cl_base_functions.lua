@@ -13,7 +13,17 @@ net.Receive("TTTKPApply", function()
     PUNISHMENT:Apply(ply)
     table.insert(TTTKP.activePunishments, PUNISHMENT)
     -- Punishment alert and description
-    chat.AddText(COLOR_YELLOW, "===Karma below " .. thresholdCvar:GetInt() .. "!===")
+    local karmaValue = ""
+
+    -- In Custom Roles for TTT, karma is displayed as a percentage, so we need to convert the karma
+    -- threshold for punishments into a percentage
+    if ConVarExists("ttt_show_raw_karma_value") and GetConVar("ttt_show_raw_karma_value"):GetBool() then
+        karmaValue = thresholdCvar:GetInt() / GetConVar("ttt_karma_max"):GetInt() .. "%"
+    else
+        karmaValue = thresholdCvar:GetInt()
+    end
+
+    chat.AddText(COLOR_YELLOW, "===Karma below " .. karmaValue .. "!===")
 
     if PUNISHMENT.desc then
         chat.AddText(COLOR_YELLOW, PUNISHMENT.desc)

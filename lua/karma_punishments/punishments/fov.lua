@@ -1,4 +1,4 @@
--- Credit goes to Malivil for this punishment from the "Quake Pro" randomat
+-- Credit goes to Abi for this punishment from the "Quake Pro" randomat
 local PUNISHMENT = {}
 PUNISHMENT.id = "fov"
 PUNISHMENT.name = "Zoomed-in FOV"

@@ -40,7 +40,11 @@ Requires: [Enhanced ThirdPerson [Reupload]](https://steamcommunity.com/sharedfil
 
 ## Credits
 
-"Reverse Controls", "Less Ammo" and "Zoomed-in FOV" punishments use code from Malivil's "Opposite day", "Wasteful!" and "Quake Pro" randomat events: <https://steamcommunity.com/sharedfiles/filedetails/?id=2055805086>
+"Reverse Controls" and "Less Ammo" punishments use code from Malivil's "Opposite day" and "Wasteful!" randomat events:\
+<https://steamcommunity.com/sharedfiles/filedetails/?id=2055805086>\
+\
+"Zoomed-in FOV" punishment uses code from Abi's "Quake Pro" randomat event:\
+<https://steamcommunity.com/sharedfiles/filedetails/?id=1406495040>
 
 ## Steam Workshop Link
 

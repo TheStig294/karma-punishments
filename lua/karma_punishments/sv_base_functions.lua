@@ -12,7 +12,7 @@ concommand.Add("kp_apply", function(ply, _, args, argsStr)
 end, nil, "Applies a karma punishment to yourself, if no argument is given, selects a random one", FCVAR_CHEAT)
 
 -- Finds a punishment for the player that can be applied, and applies it with TTTKP:ApplyPunishment()
-function TTTKP:SelectPunishment(ply)
+function TTTKP:SelectPunishment(ply, noPercent)
     if not IsValid(ply) or not ply:IsPlayer() then return end
     -- Choose a random punishment from available ones to give to the player
     local PUNISHMENT
@@ -33,13 +33,13 @@ function TTTKP:SelectPunishment(ply)
     end
 
     hook.Run("TTTKPSelected", ply, PUNISHMENT)
-    TTTKP:ApplyPunishment(ply, PUNISHMENT)
+    TTTKP:ApplyPunishment(ply, PUNISHMENT, noPercent)
 end
 
 -- Applies all punishment effects
 util.AddNetworkString("TTTKPApply")
 
-function TTTKP:ApplyPunishment(ply, PUNISHMENT)
+function TTTKP:ApplyPunishment(ply, PUNISHMENT, noPercent)
     if not IsValid(ply) or not ply:IsPlayer() then return end
     -- Punishment function (Where all the magic happens...)
     PUNISHMENT:Apply(ply)
@@ -48,9 +48,17 @@ function TTTKP:ApplyPunishment(ply, PUNISHMENT)
     -- Used for detecting if a player is punished
     PUNISHMENT.active = true
     ply.KPPunishment = PUNISHMENT
+
+    -- Stops the "Karma below 80%" part of the alert chat message from appearing
+    -- Used when manually applying punishments to players
+    if not noPercent then
+        noPercent = false
+    end
+
     -- Client-side changes
     net.Start("TTTKPApply")
     net.WriteString(PUNISHMENT.id)
+    net.WriteBool(noPercent)
     net.Send(ply)
 end
 
@@ -74,4 +82,27 @@ hook.Add("TTTBeginRound", "TTTKPApplyPunishments", function()
             end
         end
     end)
+end)
+
+-- Chat / command that applies a random karma punishment on the specified player
+hook.Add("PlayerSay", "TTTKPManualPunishment", function(sender, text, teamChat)
+    if not sender:IsAdmin() or not string.StartsWith(text, "/punish ") then return end
+    local playerName = string.lower(string.sub(text, 9))
+    local playerToPunish
+
+    for _, ply in ipairs(player.GetAll()) do
+        if string.lower(ply:Nick()) == playerName then
+            playerToPunish = ply
+            break
+        end
+    end
+
+    if IsValid(playerToPunish) then
+        TTTKP:SelectPunishment(playerToPunish, true)
+        sender:ChatPrint(playerToPunish:Nick() .. " was punished!")
+    else
+        sender:ChatPrint("Player not found")
+    end
+
+    return ""
 end)

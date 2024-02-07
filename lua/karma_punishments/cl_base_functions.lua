@@ -8,6 +8,7 @@ net.Receive("TTTKPApply", function()
     local ply = LocalPlayer()
     if not IsValid(ply) or not ply:IsPlayer() then return end
     local punishmentID = net.ReadString()
+    local noPercent = net.ReadBool()
     local PUNISHMENT = TTTKP.punishments[punishmentID]
     -- Apply punishment function on the client
     PUNISHMENT:Apply(ply)
@@ -23,7 +24,15 @@ net.Receive("TTTKPApply", function()
         karmaValue = thresholdCvar:GetInt()
     end
 
-    chat.AddText(COLOR_YELLOW, "===Karma below " .. karmaValue .. ". Karma punishment!===")
+    local msg
+
+    if noPercent then
+        msg = "===Karma punishment!==="
+    else
+        msg = "===Karma below " .. karmaValue .. ". Karma punishment!==="
+    end
+
+    chat.AddText(COLOR_YELLOW, msg)
 
     if PUNISHMENT.desc then
         chat.AddText(COLOR_YELLOW, PUNISHMENT.desc)

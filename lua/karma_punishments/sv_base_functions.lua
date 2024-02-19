@@ -54,7 +54,8 @@ function TTTKP:SelectPunishment(victim, karmaPercentMessage)
     end
 
     hook.Run("TTTKPSelected", victim, PUNISHMENT)
-    TTTKP:ApplyPunishment(victim, PUNISHMENT, karmaPercentMessage)
+
+    return TTTKP:ApplyPunishment(victim, PUNISHMENT, karmaPercentMessage)
 end
 
 -- Applies all punishment effects

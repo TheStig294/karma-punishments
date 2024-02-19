@@ -42,7 +42,7 @@ end
 -- Finds a punishment for the player that can be applied, and applies it with TTTKP:ApplyPunishment()
 -- Returns true if no punishment was actually applied
 function TTTKP:SelectPunishment(victim, karmaPercentMessage)
-    if not IsValid(victim) or not victim:IsPlayer() then return end
+    if not IsValid(victim) or not victim:IsPlayer() then return true end
     -- Choose a random punishment from available ones to give to the player
     local PUNISHMENT = TTTKP:GetValidPunishment(victim)
 
@@ -60,15 +60,16 @@ end
 -- Applies all punishment effects
 util.AddNetworkString("TTTKPApply")
 
+-- Returns true if no punishment was actually applied
 function TTTKP:ApplyPunishment(victim, PUNISHMENT, karmaPercentMessage)
-    if not IsValid(victim) or not victim:IsPlayer() then return end
+    if not IsValid(victim) or not victim:IsPlayer() then return true end
 
     -- Accept string ids for punishments as well
     if isstring(PUNISHMENT) then
         PUNISHMENT = TTTKP.punishments[PUNISHMENT]
     end
 
-    if not TTTKP:IsValidPunishment(PUNISHMENT, victim) then return end
+    if not TTTKP:IsValidPunishment(PUNISHMENT, victim) then return true end
     -- Punishment function (Where all the magic happens...)
     PUNISHMENT:Apply(victim)
     table.insert(TTTKP.activePunishments, PUNISHMENT)

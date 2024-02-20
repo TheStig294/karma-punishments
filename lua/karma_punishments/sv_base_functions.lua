@@ -121,7 +121,7 @@ hook.Add("PlayerSay", "TTTKPManualPunishment", function(sender, text, teamChat)
     local victim
 
     for _, ply in ipairs(player.GetAll()) do
-        if string.lower(victim:Nick()) == playerName then
+        if string.lower(ply:Nick()) == playerName then
             victim = ply
             break
         end

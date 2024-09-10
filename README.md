@@ -163,3 +163,6 @@ Sets your FOV lower\
 *ttt_kp_fov* - Default: 1 - Whether this punishment is enabled\
 *kp_fov_scale* - Default: 0.5 - FOV multiplier\
 *kp_fov_scale_ironsight* - Default: 0.3 - Ironsights FOV multiplier
+
+## Steam Workshop Link
+https://steamcommunity.com/sharedfiles/filedetails/?id=2256515054

@@ -42,9 +42,6 @@ Requires: [Enhanced ThirdPerson [Reupload]](https://steamcommunity.com/sharedfil
 
 "Reverse Controls" and "Less Ammo" punishments use code from Malivil's "Opposite day" and "Wasteful!" randomat events:\
 <https://steamcommunity.com/sharedfiles/filedetails/?id=2055805086>\
-\
-"Zoomed-in FOV" punishment uses code from Abi's "Quake Pro" randomat event:\
-<https://steamcommunity.com/sharedfiles/filedetails/?id=1406495040>
 
 ## Steam Workshop Link
 
@@ -137,12 +134,6 @@ Randomly changes your mouse sensitivity every few seconds\
 *ttt_kp_sensitive* - Default: 1 - Whether this punishment is enabled\
 *kp_sensitive_seconds* - Default: 5 - Seconds between sensitivity changes
 
-### Screen Blur
-
-Applies a heavy screen blur\
-\
-*ttt_kp_screenblur* - Default: 1 - Whether this punishment is enabled
-
 ### Slow Movement
 
 You move more slowly\
@@ -156,13 +147,6 @@ You are forced to use a third-person view\
 \
 *ttt_kp_thirdperson* - Default: 1 - Whether this punishment is enabled
 
-### Zoomed-in FOV
-
-Sets your FOV lower\
-\
-*ttt_kp_fov* - Default: 1 - Whether this punishment is enabled\
-*kp_fov_scale* - Default: 0.5 - FOV multiplier\
-*kp_fov_scale_ironsight* - Default: 0.3 - Ironsights FOV multiplier
-
 ## Steam Workshop Link
-https://steamcommunity.com/sharedfiles/filedetails/?id=2256515054
+
+<https://steamcommunity.com/sharedfiles/filedetails/?id=2256515054>

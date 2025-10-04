@@ -5,37 +5,22 @@ PUNISHMENT.desc = "You're stuck in third-person!"
 PUNISHMENT.extDesc = "You are forced to use a third-person view"
 
 function PUNISHMENT:Apply(ply)
-    if CLIENT then
-        SetGlobalBool("RandomatThirdPerson", true)
-        local thirdPersonCvar = GetConVar("thirdperson_etp")
-        thirdPersonCvar:SetBool(true)
+    if SERVER then return end
 
-        self:AddHook("PlayerBindPress", function(p, bind)
-            if string.find(bind, "thirdperson_enhanced_toggle") and self:IsPunishedPlayer(p) then
-                p:PrintMessage(HUD_PRINTCENTER, "Third person toggle is disabled")
+    self:AddHook("CalcView", function(p, pos, angles, fov, znear, zfar)
+        if not self:IsPunishedPlayer(p) or not p:Alive() or p:IsSpec() then return end
 
-                return true
-            end
-        end)
+        local view = {
+            origin = pos - (angles:Forward() * 100),
+            angles = angles,
+            fov = fov,
+            drawviewer = true,
+            znear = znear,
+            zfar = zfar
+        }
 
-        self:AddHook("Think", function()
-            if not thirdPersonCvar:GetBool() and self:IsPunishedPlayer(ply) then
-                thirdPersonCvar:SetBool(true)
-            end
-        end)
-    end
-end
-
-function PUNISHMENT:Reset(ply)
-    if CLIENT then
-        SetGlobalBool("RandomatThirdPerson", false)
-        RunConsoleCommand("thirdperson_etp", "0")
-    end
-end
-
--- Check third person mod is installed
-function PUNISHMENT:Condition(ply)
-    return istable(THIRDPERSON_ENHANCED)
+        return view
+    end)
 end
 
 TTTKP:Register(PUNISHMENT)

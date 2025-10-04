@@ -27,16 +27,13 @@ Some punishments require another mod to be installed to work! Here is the comple
 
 ### Forced Railgun
 
-Requires: [Lykrast's TTT Weapon Collection](https://steamcommunity.com/sharedfiles/filedetails/?id=337994500)
+Requires: [Lykrast's TTT Weapon Collection](https://steamcommunity.com/sharedfiles/filedetails/?id=337994500)\
+(Or some other mod that adds the Lykrast railgun like: [[TTT] Classic Weapons Remade](https://steamcommunity.com/sharedfiles/filedetails/?id=3573096208))
 
 ### No Sprinting
 
 Requires: [TTT Sprint](https://steamcommunity.com/sharedfiles/filedetails/?id=933056549)\
 (Or some other mod that adds sprinting)
-
-### Third-person
-
-Requires: [Enhanced ThirdPerson [Reupload]](https://steamcommunity.com/sharedfiles/filedetails/?id=2593095865)
 
 ## Credits
 

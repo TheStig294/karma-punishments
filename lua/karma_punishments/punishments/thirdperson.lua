@@ -11,7 +11,10 @@ function PUNISHMENT:Apply(ply)
         if not self:IsPunishedPlayer(p) or not p:Alive() or p:IsSpec() then return end
 
         local view = {
-            origin = pos - (angles:Forward() * 100),
+            origin = util.TraceLine({
+                start = pos,
+                endPos = pos - angles:Forward() * 100
+            }).HitPos,
             angles = angles,
             fov = fov,
             drawviewer = true,

@@ -13,7 +13,7 @@ function PUNISHMENT:Apply(ply)
         local view = {
             origin = util.TraceLine({
                 start = pos,
-                endPos = pos - angles:Forward() * 100,
+                endpos = pos - angles:Forward() * 100,
                 filter = p
             }).HitPos,
             angles = angles,
